@@ -1,6 +1,9 @@
 # -*- coding:utf-8 -*-
 from urllib.parse import quote_plus
 import requests
+
+import sys 
+sys.path.append("D:\code\python\TV_Spider") 
 from utils import ali
 import urllib3
 
@@ -68,6 +71,6 @@ if __name__ == '__main__':
     # res = detailContent("yiso$https://www.aliyundrive.com/s/k7mVEDdow6K", "")
     # res = detailContent("yiso$https://www.aliyundrive.com/s/j4Lfi2JCeiY", "")
     # res = detailContent("yiso$https://www.aliyundrive.com/s/TKhdWEjFmLB", "")
-    res = detailContent("yiso$https://www.aliyundrive.com/s/qpbVbqwFqYS", "")
+    res = detailContent("yiso$https://www.aliyundrive.com/s/qpbVbqwFqYS", '''__51vcke__JkIGvjjs25ETn0wz=472fb966-038e-53d5-acbf-b0788c68c953; __51vuft__JkIGvjjs25ETn0wz=1664252587434; __51uvsct__JkIGvjjs25ETn0wz=4; __vtins__JkIGvjjs25ETn0wz={"sid": "5fec5a7b-480d-5a56-b31a-a89dbaa73b52", "vd": 2, "stt": 2486, "dr": 2486, "expires": 1665316862529, "ct": 1665315062529}''')
     # res = playerContent("yiso___3wRZPrya62d__eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21Kc29uIjoie1wiZG9tYWluX2lkXCI6XCJiajI5XCIsXCJzaGFyZV9pZFwiOlwiM3dSWlByeWE2MmRcIixcImNyZWF0b3JcIjpcImFhNWVhM2E4OGI2YjRiMzNhNGEzZDk2YzI3YTQ3MjRlXCIsXCJ1c2VyX2lkXCI6XCJhbm9ueW1vdXNcIn0iLCJjdXN0b21UeXBlIjoic2hhcmVfbGluayIsImV4cCI6MTY2MTg3ODU5NywiaWF0IjoxNjYxODcxMzM3fQ.Gga13jLMcFSzb5q9eOTj4RhskXYu6XlUiGjrvM8WrYEA1YBPqY623S57Jb8oJUQQvRZf1n7T4Qkr7pRzUwMqtZFzd6WZDuS9pMq7hOnJ__GLCv4Qh5dDCIWPd5a52QlyA_DvGH7v59_CfX-Xwd_x6_roxca6UBThauyaNHuxIJE__618e92dece90a01af07a43bda50a2b9d26e1dd6f__video", "AliYun原画", "")
     print(res)

@@ -202,9 +202,9 @@ def playerContent(ids, flag, token):
 
 
 if __name__ == '__main__':
-    # res = searchContent("成", "")
+    res = searchContent("大坏狐狸的故事", "")
     # res = detailContent('ddys$top-gun-maverick', "")
-    res = detailContent('ddys$psychopath-diary', "")
+    # res = detailContent('ddys$psychopath-diary', "")
     # func = "playerContent"
     # res = playerContent("ddys___/v/jp_drama/alive_2020/alive_2020_e01.mp4|https://ddys.tv/subddr/v/jp_drama/alive_2020/alive_2020_e01.ddr", "", "")
     # res = eval(func)("68614-1-1")

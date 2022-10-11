@@ -1,10 +1,13 @@
 # -*- coding:utf-8 -*-
 from urllib.parse import quote_plus
 import requests
-from utils import ali
 from bs4 import BeautifulSoup
 import re
 import urllib3
+
+import sys 
+sys.path.append("D:\code\python\TV_Spider") 
+from utils import ali
 
 
 urllib3.util.timeout.Timeout._validate_timeout = lambda *args: 5 if args[2] != 'total' else None
@@ -73,8 +76,8 @@ def playerContent(ids, flag, token):
 
 
 if __name__ == '__main__':
-    # res = searchContent("冰雨火")
-    res = detailContent('zhaoziyuan$https://www.aliyundrive.com/s/i3E3Zvq5f3H', "")
+    res = searchContent("冰雨火",'Hm_lvt_f8dbe8e3528b7f9c3a3ac55d5d63f51a=1664248363; _ga=GA1.1.1946707363.1664248363; _ga_87FHSRTKRB=GS1.1.1664252322.2.0.1664252322.0.0.0; username=1007; loginhash=dd02f5ee3c05c48e02a691ba4e1a8cd8')
+    # res = detailContent('zhaoziyuan$https://www.aliyundrive.com/s/i3E3Zvq5f3H', "")
     # res = playerContent('zhaoziyuan___3xfBjW6JbHR__eyJhbGciOiJSUzI1NiIsInR5cCI6IkpXVCJ9.eyJjdXN0b21Kc29uIjoie1wiZG9tYWluX2lkXCI6XCJiajI5XCIsXCJzaGFyZV9pZFwiOlwiM3hmQmpXNkpiSFJcIixcImNyZWF0b3JcIjpcImVlNDhjYjcwNmNhYTQ4MjZhNTFiM2ExZTVhMTA1YjhlXCIsXCJ1c2VyX2lkXCI6XCJhbm9ueW1vdXNcIn0iLCJjdXN0b21UeXBlIjoic2hhcmVfbGluayIsImV4cCI6MTY2MTg3NjE0NSwiaWF0IjoxNjYxODY4ODg1fQ.V4Wl_4s6A9V8k0UX3Y_wao4CzMSH8_mE_No1WduKfDSx37q1qqeARTItMkN_rpibVtsm9N3gzdvYCAsX9JoWW0mWg801iwPFkUME-BAtp5wdoHZ10KAJK5pfxsc1xorJp_2_1MopolHP9ZIwMSr9mGef2VQ2QgNZNsCKqrSueh4__630c949c9e0789ac7121425a9156efe6f1aa5348__video', "AliYun原画", "")
 
     print(res)

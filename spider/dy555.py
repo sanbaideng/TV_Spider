@@ -5,9 +5,12 @@ import requests
 from bs4 import BeautifulSoup
 import re
 import json
-from utils import utils_dy555
+# from utils import utils_dy555
 import urllib3
 
+import sys 
+sys.path.append("D:\code\python\TV_Spider") 
+from utils import utils_dy555
 
 urllib3.util.timeout.Timeout._validate_timeout = lambda *args: 5 if args[2] != 'total' else None
 
@@ -199,10 +202,17 @@ def searchContent(key, token):
         url = siteUrl + "/index.php/ajax/suggest?mid=1&wd=" + quote_plus(
             key) + f"&limit={limit}&timestamp=" + currentTime
         searchResult = requests.get(url=url, headers=getHeaders(url)).json()
+        # searchResult = json.load(searchResult)
         videos = []
         if searchResult.get("total") > 0:
             lists = searchResult.get("list")
             for vod in lists:
+                # videos.append({
+                #     "vod_id": f'{Tag}${vod.get("id")}',
+                #     "vod_name": vod.get("name"),
+                #     "vod_pic": vod.get("pic"),
+                #     "vod_remarks": Tag_name
+                # })
                 videos.append({
                     "vod_id": f'{Tag}${vod.get("id")}',
                     "vod_name": vod.get("name"),
@@ -328,7 +338,9 @@ def playerContent(ids, flag, token):
 
 
 if __name__ == '__main__':
-    # res = searchContent("壮志凌云", "")
+    res = searchContent("大坏狐狸的故事", "")
     # res = detailContent('dy555$367659', "")
-    res = playerContent("dy555___292787-1-1", "", "")
+    # res = detailContent('dy555$363063', "")
+    # res = playerContent("dy555___292787-1-1", "", "")
+    # res = playerContent("dy555___363063-1-1", "", "")
     print(res)

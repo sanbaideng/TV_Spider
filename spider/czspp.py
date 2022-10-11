@@ -223,10 +223,10 @@ def playerContent(ids, flag, token):
         print(e)
     return {}
 
-
+# def allinone()
 if __name__ == '__main__':
-    # res = searchContent("星汉灿烂")
-    res = detailContent("czspp$11727", "")
+    res = searchContent("星汉灿烂","")
+    # res = detailContent("czspp$11727", "")
     # func = "playerContent"
     # res = playerContent("bXZfNDg2Mi1ubV82")
     # res = eval(func)("68614-1-1")
